@@ -20,8 +20,12 @@ RUN npm install
 # Menyalin semua file dari direktori lokal ke container
 COPY . .
 
+# Menjalankan build aplikasi
+RUN npm run build
+
 # Menentukan port yang digunakan
 EXPOSE 80
 
 # Menjalankan aplikasi
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]
+
