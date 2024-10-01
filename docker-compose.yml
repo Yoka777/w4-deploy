@@ -7,3 +7,5 @@ services:
         STUDENT_NIM: "00000073877"
     ports:
      - "80:80"
+     environment:
+     - PORT=80
