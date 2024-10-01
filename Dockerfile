@@ -9,3 +9,23 @@ ENV NUXT_STUDENT_NIM ${STUDENT_NIM}
 ### </JANGAN DIGANTI>
 
 # TODO: code disini
+# Menggunakan base image node versi LTS
+FROM node:20
+
+# Menentukan direktori kerja di dalam container
+WORKDIR /app
+
+# Menyalin file package.json dan package-lock.json
+COPY package*.json ./
+
+# Menginstall dependencies
+RUN npm install
+
+# Menyalin semua file dari direktori lokal ke container
+COPY . .
+
+# Menentukan port yang digunakan
+EXPOSE 80
+
+# Menjalankan aplikasi
+CMD ["npm", "run", "start"]
