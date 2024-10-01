@@ -27,5 +27,5 @@ RUN npm run build
 EXPOSE 80
 
 # Menjalankan aplikasi
-CMD ["npm", "run", "start"]
+CMD ["node", ".output/server/index.mjs"]
 
