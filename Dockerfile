@@ -28,4 +28,4 @@ COPY . .
 EXPOSE 80
 
 # Menjalankan aplikasi
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
