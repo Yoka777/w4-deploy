@@ -24,7 +24,7 @@ COPY . .
 RUN npm run build
 
 # Menentukan port yang digunakan
-EXPOSE 80
+EXPOSE 3000
 
 # Menjalankan aplikasi
 CMD ["node", ".output/server/index.mjs"]
